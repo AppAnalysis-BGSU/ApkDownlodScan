@@ -5,7 +5,7 @@
 curl https://androzoo.uni.lu/static/lists/latest.csv.gz --output latest.csv.gz
 ```
 
-### Get the first column
+### Get the first column [Not necessary]
 
 ```
 awk -F"," '{if ($1) print $1}' latest.csv >sha256List.csv
