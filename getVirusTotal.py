@@ -25,7 +25,7 @@ with open(sys.argv[1]) as f:
         md5lists.append(temp)
 
 
-apikey = '3517dacdd3e6f25963861bd7a004fc2047533149febb863f562bb07e39e90707' # Get the API key from the virus total website.
+apikey = '' # Get the API key from the virus total website.
 
 headers = {
           "Accept-Encoding": "gzip, deflate",
@@ -56,7 +56,7 @@ for md5 in md5lists:
         f.write(md5)
 
     if md5 not in downLoadedApks: # If the file has not been downloaded, download it. 
-        os.system('curl -O --remote-header-name -G -d apikey=1fa1e5ee99a2a58c4d9bc5c6da3236c6cf707fd8f893c1b492e0648ceb20553d -d sha256='+md5+' https://androzoo.uni.lu/api/download')
+        os.system('curl -O --remote-header-name -G -d apikey=$apikey -d sha256='+md5+' https://androzoo.uni.lu/api/download')
 
     print "Processed sha256:", md5
     time.sleep(15)
