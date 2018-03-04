@@ -25,6 +25,8 @@ headers = {
           "User-Agent" : "gzip,  My Python requests library example client or username"
           }
 uri = 'https://www.virustotal.com/vtapi/v2/file/report'
+foundFilePath = "foundList.csv"
+
 
 count = 0
 for md5 in md5lists:	
@@ -41,5 +43,10 @@ for md5 in md5lists:
         continue
     with open(path, "w") as f:
         f.write(response.content)
+
+    with open(foundFilePath,"a") as f:
+        f.write('\n')
+        f.write(md5)
+
     print "Processed sha256:", md5
     time.sleep(15)
