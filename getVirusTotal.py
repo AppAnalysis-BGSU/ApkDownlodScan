@@ -1,6 +1,6 @@
 ''' 
 Original Author: Yuping Li, University of South Florida
-Modified/ Adpated By: Shiva Bhusal, BGSU
+Modified/ adapted By: Shiva Bhusal, BGSU
 '''
  
 import os
@@ -9,7 +9,14 @@ import time
 import requests
 
 md5lists = []
+downLoadedApks=[]
 targetdir = sys.argv[2]
+
+with open("newapks_already_downloaded.txt") as f: #Open the file and get its content in a list. 
+    for line in f:
+        temp=line.strip().split('.')[0]
+        downLoadedApks.append(temp)
+
 
 with open(sys.argv[1]) as f:
     for line in f:
@@ -47,6 +54,9 @@ for md5 in md5lists:
     with open(foundFilePath,"a") as f:
         f.write('\n')
         f.write(md5)
+
+    if md5 not in downLoadedApks: # If the file has not been downloaded, download it. 
+        os.system('cat '+foundFilePath)
 
     print "Processed sha256:", md5
     time.sleep(15)
