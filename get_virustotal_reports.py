@@ -19,7 +19,7 @@ with open(sys.argv[1]) as f:
         md5lists.append(temp)
 
 
-apikey = 'String' 
+apikey = 'String__' # Get the API key from the virus total website.  
 
 headers = {
           "Accept-Encoding": "gzip, deflate",
@@ -40,9 +40,8 @@ for md5 in md5lists:
         count += 1
         print response.status_code, len(response.text)
         continue
-    if os.path.exists(path):
-        with open(path, "w") as f:
-            f.write(response.content)
-        print "Processed sha256:", md5
+    with open(path, "w") as f:
+        f.write(response.content)
+    print "Processed sha256:", md5
 
     time.sleep(15)

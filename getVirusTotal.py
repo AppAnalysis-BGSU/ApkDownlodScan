@@ -14,12 +14,11 @@ targetdir = sys.argv[2]
 with open(sys.argv[1]) as f:
     for line in f:
         #md5 = line.strip().split()[1]
-        temp=line.strip().split(".")[0]
-        temp=temp+str(".apk")
+        temp=line.strip()
         md5lists.append(temp)
 
 
-apikey = '3517dacdd3e6f25963861bd7a004fc2047533149febb863f562bb07e39e90707' 
+apikey = '3517dacdd3e6f25963861bd7a004fc2047533149febb863f562bb07e39e90707' # Get the API key from the virus total website.
 
 headers = {
           "Accept-Encoding": "gzip, deflate",
@@ -40,9 +39,7 @@ for md5 in md5lists:
         count += 1
         print response.status_code, len(response.text)
         continue
-    if os.path.exists(path):
-        with open(path, "w") as f:
-            f.write("Hello")
-        print "Processed sha256:", md5
-
+    with open(path, "w") as f:
+        f.write(response.content)
+    print "Processed sha256:", md5
     time.sleep(15)
