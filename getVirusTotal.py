@@ -56,7 +56,7 @@ for md5 in md5lists:
         f.write(md5)
 
     if md5 not in downLoadedApks: # If the file has not been downloaded, download it. 
-        os.system('cat '+foundFilePath)
+        os.system('curl -O --remote-header-name -G -d apikey=1fa1e5ee99a2a58c4d9bc5c6da3236c6cf707fd8f893c1b492e0648ceb20553d -d sha256='+md5+' https://androzoo.uni.lu/api/download')
 
     print "Processed sha256:", md5
     time.sleep(15)
