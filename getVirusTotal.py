@@ -19,7 +19,7 @@ with open(sys.argv[1]) as f:
         md5lists.append(temp)
 
 
-apikey = 'String' 
+apikey = '3517dacdd3e6f25963861bd7a004fc2047533149febb863f562bb07e39e90707' 
 
 headers = {
           "Accept-Encoding": "gzip, deflate",
@@ -42,7 +42,7 @@ for md5 in md5lists:
         continue
     if os.path.exists(path):
         with open(path, "w") as f:
-            f.write(response.content)
+            f.write("Hello")
         print "Processed sha256:", md5
 
     time.sleep(15)
