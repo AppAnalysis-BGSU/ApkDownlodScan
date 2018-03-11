@@ -8,7 +8,7 @@ import sys
 import time
 import requests
 
-md5lists = []
+sha256lists = [] #md5 renamed to sha256. 
 downLoadedApks=[]
 targetdir = sys.argv[2]
 
@@ -20,9 +20,9 @@ with open("newapks_already_downloaded.txt") as f: #Open the file and get its con
 
 with open(sys.argv[1]) as f:
     for line in f:
-        #md5 = line.strip().split()[1]
+        #sha256 = line.strip().split()[1]
         temp=line.strip()
-        md5lists.append(temp)
+        sha256lists.append(temp)
 
 
 apikey = '$key_virusTotal' # Get the API key from the virus total website.
@@ -36,11 +36,11 @@ foundFilePath = "foundList.csv"
 
 
 count = 0
-for md5 in md5lists:	
-    path = os.path.join(targetdir, md5+".json")
+for sha256 in sha256lists:	
+    path = os.path.join(targetdir, sha256+".json")
     if os.path.exists(path):
         continue
-    params = {'apikey': apikey, 'resource': md5}
+    params = {'apikey': apikey, 'resource': sha256}
     response = requests.get(uri, params=params, headers=headers)
     if response.status_code != 200 or not response.text:
         if count >= 3:
@@ -53,10 +53,10 @@ for md5 in md5lists:
 
     with open(foundFilePath,"a") as f:
         f.write('\n')
-        f.write(md5)
+        f.write(sha256)
 
-    if md5 not in downLoadedApks: # If the file has not been downloaded, download it. # Get the API key from Androzoo. 
-        os.system('curl -G -d apikey=$key_androZoo -d sha256='+md5+' https://androzoo.uni.lu/api/download -o downloads/'+md5+'.apk')
+    if sha256 not in downLoadedApks: # If the file has not been downloaded, download it. # Get the API key from Androzoo. 
+        os.system('curl -G -d apikey=$key_androZoo -d sha256='+sha256+' https://androzoo.uni.lu/api/download -o downloads/'+sha256+'.apk')
 
-    print "Processed sha256:", md5
+    print "Processed sha256:", sha256
     time.sleep(15)
