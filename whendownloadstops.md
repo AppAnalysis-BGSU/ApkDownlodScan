@@ -1,4 +1,4 @@
-# What do do when download stops: 
+# What to do when download stops: 
 
 [0] Login as root and Go to /media/seagate/Androzoo. 
 
