@@ -55,6 +55,8 @@ python sendEmail.py
 
 Note ( Optional):  During this transition, we may miss 0-30 files from the list. Also, there may be 0-30 redundant APK names in the foundList.csv. But, this should be fine. This can be prevented by strictly matching the sha256, which is hectic thing to do because of 20-50 missing / redundant files. 
 
+In case of any issues, Please email : civabhusal@gmail.com
+
 
 
 
