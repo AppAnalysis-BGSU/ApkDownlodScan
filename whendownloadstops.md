@@ -55,6 +55,19 @@ python sendEmail.py
 
 Note ( Optional):  During this transition, we may miss 0-30 files from the list. Also, there may be 0-30 redundant APK names in the foundList.csv. But, this should be fine. This can be prevented by strictly matching the sha256, which is hectic thing to do because of 20-50 missing / redundant files. 
 
+# What to do When academic api access expires 
+It will expire tentatively during the last week of July. In that case, 
+Either:
+[1] Get the new academic api and follow the above process. 
+Or 
+[2] Increase the delay in getVirusTotal.py to 15 s. Currently it is 1 s. 
+
+```
+time.sleep(1) #Change the delay to 15 s 
+```
+
+
+
 In case of any issues, Please email : civabhusal@gmail.com
 
 
