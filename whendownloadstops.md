@@ -23,11 +23,14 @@ Say, (N)
 I would calculate (N-9961), say we get M. 
 and do: 
 
+```
 tail -M list_5312018.csv > tail list_6022018.csv
+```
 
 [5] Now we have the updated list. And we may want to start the process. 
-
+```
 python getVirusTotal.py list_6022018 report4 
+```
 
 First argument is the list of files, second argument is the folder where you want to keep your downloaded .json files. 
 
@@ -46,7 +49,9 @@ if sha256 not in downLoadedApks: # If the file has not been downloaded, download
 
 [6] Once you run the script, next step is to run the email script to track the progress. 
 
+```
 python sendEmail.py
+```
 
 
 
