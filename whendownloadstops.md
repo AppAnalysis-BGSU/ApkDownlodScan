@@ -2,7 +2,7 @@
 
 [0] Login as root and Go to /media/seagate/Androzoo. 
 
-[1] Look at the email from appdownloadupdates.gmail.com and get the count of the apps downloaded when the process started running. 
+[1] Look at the email from appdownloadupdates@gmail.com and get the count of the apps downloaded when the process started running. 
 
 Example: 150859 APKs downloaded.
 
