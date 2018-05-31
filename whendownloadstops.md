@@ -24,7 +24,7 @@ I would calculate (N-9961), say we get M.
 and do: 
 
 ```
-tail -M list_5312018.csv > tail list_6022018.csv
+tail -M list_5312018.csv > list_6022018.csv
 ```
 
 [5] Now we have the updated list. And we may want to start the process. 
