@@ -29,7 +29,7 @@ tail -M list_5312018.csv > list_6022018.csv
 
 [5] Now we have the updated list. And we may want to start the process. 
 ```
-python getVirusTotal.py list_6022018 report4 
+python getVirusTotal.py list_6022018.csv report4 
 ```
 
 First argument is the list of files, second argument is the folder where you want to keep your downloaded .json files. 
@@ -53,7 +53,7 @@ if sha256 not in downLoadedApks: # If the file has not been downloaded, download
 python sendEmail.py
 ```
 
-Note ( Optional):  During this transition, we may miss 0-30 files from the list. Also, there may be 0-30 redundant APK names in the foundList.csv. But, this should be fine. This can be prevented by strictly matching the sha256, which is hectic thing to do because of 20-50 missing / redundant files. 
+Note ( Optional):  During this transition, we may miss 0-30 files from the list. Also, there may be 0-30 redundant APK names in the foundList.csv. But, this should be fine. This can be prevented by strictly matching the sha256, which is hectic thing to do because of  missing / redundant files during our transitions in the past.  
 
 # What to do When academic api access expires 
 It will expire tentatively during the last week of July. In that case, 
