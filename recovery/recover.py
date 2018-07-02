@@ -38,6 +38,9 @@ for line in foundListContent:
     foundList.append(line.strip())
 foundListContent.close()
 
+'''
+Only take those files from currentList which are not in foundList.
+'''
 for sha256 in currentList:
     if sha256 not in foundList:
         print(sha256)
