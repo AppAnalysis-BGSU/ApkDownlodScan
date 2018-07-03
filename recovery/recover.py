@@ -15,27 +15,29 @@ arg1 is the original fileList ( the list of files for which download process had
 
 arg2 is the foundList.
 
-
+Note: Use set instead of list.
 '''
 
 import sys
+import re
 
+#pattern = re.compile('found*')
 current = str(sys.argv[1])
 foundFile = str(sys.argv[2])
 
-currentList = []
-foundList = []
-newList = []
+currentList = set()
+foundList = set()
+newList = set()
 
 currentContent = open (current, 'r')
 
 for line in currentContent:
-    currentList.append(line.strip())
+    currentList.add(line.strip())
 currentContent.close()
 
 foundListContent = open (foundFile, 'r')
 for line in foundListContent:
-    foundList.append(line.strip())
+    foundList.add(line.strip())
 foundListContent.close()
 
 for sha256 in currentList:
