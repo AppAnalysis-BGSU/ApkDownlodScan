@@ -23,9 +23,14 @@ should be the foundList.csv
 import sys
 import re
 
-#pattern = re.compile('found*')
+pattern = re.compile('found*')
 current = str(sys.argv[1])
 foundFile = str(sys.argv[2])
+
+# In case, second argument is not the foundList, exit the program.
+if not (pattern.match(foundFile)):
+    print('Second argument should be the foundList')
+    sys.exit()
 
 currentList = set()
 foundList = set()
