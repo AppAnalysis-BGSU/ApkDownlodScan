@@ -5,7 +5,7 @@
 ```
 curl https://raw.githubusercontent.com/AppAnalysis-BGSU/ApkDownlodScan/master/recovery/recover.py
 ```
-[2] Run the script and test. First argument to the program is the latest list of files ( as per date), and second argument is the foundList.
+[2] Run the script and test. First argument to the program is the most recent list of files ( as per date), and second argument is the foundList.
 
 Eg. 
 ```
