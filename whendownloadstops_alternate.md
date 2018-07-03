@@ -1,18 +1,18 @@
 # What to do when download stops ( Alternative approach)
 
-### Download Python Script from Github. 
+[1] Download Python Script from Github. 
 
 ```
 curl https://raw.githubusercontent.com/AppAnalysis-BGSU/ApkDownlodScan/master/recovery/recover.py
 ```
-### Run the script and test. First argument to the program is the latest list of files ( as per date), and second argument is the foundList.
+[2] Run the script and test. First argument to the program is the latest list of files ( as per date), and second argument is the foundList.
 
 Eg. 
 ```
 python recover.py list_july3.csv foundList.csv
 
 ```
-* Check the no of lines of the result:
+[3] Check the no of lines of the result:
 
 ```
 python recover.py list_july3.csv foundList.csv | wc - l
@@ -33,14 +33,14 @@ Y:
 ls downloads4 | wc -l
 ```
 
-### If everything looks good in the above step, run the script and create a new list of files. 
+[4] If everything looks good in the above step, run the script and create a new list of files. 
 
 ```
 python recover.py list_july3.csv foundList.csv > list_$today's_date.csv
 
 ```
 
-### Now, use this new list and start the download process:
+[5] Now, use this new list and start the download process:
 
 First argument is the new List and second argument is the folder where you want to download the VirusTotal results.
 
@@ -65,9 +65,9 @@ if sha256 not in downLoadedApks: # If the file has not been downloaded, download
 os.system('curl -G -d apikey=$key_androZoo -d sha256='+sha256+' https://androzoo.uni.lu/api/download -o downloads/'+sha256+'.apk') #Modify this line. 
 ```
 
-[5] Check the counts in folders: report5, downloads5, and the increment in foundList.csv. 
+[6] Check the counts in folders: report5, downloads5, and the increment in foundList.csv. 
 
-[6] If everything is Ok in 5, run the email sending script to track the progress:
+[7] If everything is Ok in 5, run the email sending script to track the progress:
 
 ```
 python sendEmail.py
