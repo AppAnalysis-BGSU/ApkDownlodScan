@@ -15,7 +15,9 @@ arg1 is the original fileList ( the list of files for which download process had
 
 arg2 is the foundList.
 
-Note: Use set instead of list.
+Disclaimer : Please be strict with the first and second argument: first one should be original file list, second one
+should be the foundList.csv
+
 '''
 
 import sys
@@ -40,6 +42,9 @@ for line in foundListContent:
     foundList.add(line.strip())
 foundListContent.close()
 
+'''
+Only take those files from currentList which are not in foundList.
+'''
 for sha256 in currentList:
     if sha256 not in foundList:
         print(sha256)
