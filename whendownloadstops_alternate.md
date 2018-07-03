@@ -21,7 +21,7 @@ python recover.py list_july3.csv foundList.csv | wc - l
 The no of lines should be roughly equal to the (X-Y)
 
 Where, in this example,  X is the no of lines in list_july3.csv and 
-Y is the no of files in the most recent folder. 
+Y is the no of files in the most recent downloads folder. 
 
 X: 
 ```
