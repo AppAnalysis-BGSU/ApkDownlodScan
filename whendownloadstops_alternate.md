@@ -55,7 +55,7 @@ There will be  N folders in the directory: report, report2, report3, report4...r
 and corresponding folders downloads, downloads2, downloads3, downloads4, downloadsN This will help us copy some portion for research / testing. 
 But, we may want to merge everything together at the end. 
 
-If you are keeping results in a new folders ( reportN, downloadsN)
+If you are keeping results in a new folders, 
 Example, report5,and downloads5,  
 
 Make sure you make necessary updates in the script as well, 
