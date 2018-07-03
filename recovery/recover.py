@@ -15,6 +15,8 @@ arg1 is the original fileList ( the list of files for which download process had
 
 arg2 is the foundList.
 
+Disclaimer : Please be strict with the first and second argument: first one should be original file list, second one
+should be the foundList.csv
 
 '''
 
