@@ -1,18 +1,18 @@
 # What to do when download stops ( Alternative approach)
 
-[1] Download Python Script from Github. 
+### Download Python Script from Github. 
 
 ```
 curl https://raw.githubusercontent.com/AppAnalysis-BGSU/ApkDownlodScan/master/recovery/recover.py
 ```
-[2] Run the script and test. First argument to the program is the latest list of files ( as per date), and second argument is the foundList.
+### Run the script and test. First argument to the program is the latest list of files ( as per date), and second argument is the foundList.
 
 Eg. 
 ```
 python recover.py list_july3.csv foundList.csv
 
 ```
-Check the no of lines of the result:
+* Check the no of lines of the result:
 
 ```
 python recover.py list_july3.csv foundList.csv | wc - l
@@ -33,14 +33,14 @@ Y:
 ls downloads4 | wc -l
 ```
 
-[3] If everything looks good in [2], run the script and create a new list of files. 
+### If everything looks good in the above step, run the script and create a new list of files. 
 
 ```
 python recover.py list_july3.csv foundList.csv > list_$today's_date.csv
 
 ```
 
-[4] Now, use this new list and start the download process:
+### Now, use this new list and start the download process:
 
 First argument is the new List and second argument is the folder where you want to download the VirusTotal results.
 
