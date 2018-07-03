@@ -49,7 +49,7 @@ Example,
 python getVirusTotal.py list_$today's_date.csv report5
 ```
 
-Please note:
+**Please note:**
 
 There will be  N folders in the directory: report, report2, report3, report4...reportN 
 and corresponding folders downloads, downloads2, downloads3, downloads4, downloadsN This will help us copy some portion for research / testing. 
