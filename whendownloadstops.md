@@ -33,7 +33,7 @@ Note that list_6022018.csv has 9961 fewer apps than list_5312018.csv.
 python getVirusTotal.py list_6022018.csv report4 
 ```
 
-First argument is the list of files, second argument is the folder where you want to keep your downloaded .json files. 
+First argument is the list of files (to-be-downloaded), second argument is the folder where you want to keep your downloaded .json files. 
 
 There are four folders : report, report2, report3, report4 
 and corresponding folders downloads, downloads2, downloads3, downloads4. This will help us copy some portion for research / testing. 
