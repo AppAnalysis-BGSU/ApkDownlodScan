@@ -15,7 +15,7 @@ Example, 160820
 [3] Find the difference: 
 160820 - 150859 = 9961
 
-[4] Get the total count in the APKlist. List has been kept with date information. 
+[4] Get the total count in the APKlist (to-be-downloaded). List has been kept with date information. 
 wc -l list_5312018.csv 
 
 Say, (N)
