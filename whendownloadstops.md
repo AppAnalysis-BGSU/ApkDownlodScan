@@ -27,6 +27,7 @@ and do:
 tail -M list_5312018.csv > list_6022018.csv
 ```
 Note that list_6022018.csv has 9961 fewer apps than list_5312018.csv.
+
 [5] Now we have the updated list. And we may want to start the process. 
 ```
 python getVirusTotal.py list_6022018.csv report4 
